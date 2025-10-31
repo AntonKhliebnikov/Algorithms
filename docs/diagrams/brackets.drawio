@@ -1,0 +1,127 @@
+<mxfile host="drawio-plugin" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" modified="2025-10-31T15:18:51.858Z" etag="akxhbXxLSOzqmAoK8VZF" version="22.1.22" type="embed">
+  <diagram id="page-1" name="BracketsCheck">
+    <mxGraphModel dx="2560" dy="359" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="Start" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="100" y="40" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="Ввести строку: equation" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="130" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="Инициализируем пустой стек (ArrayDeque)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-5" y="220" width="320" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="for&lt;div&gt;Цикл: для каждого символа s из equation.split(&quot;&quot;)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-55" y="300" width="420" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="if&lt;div&gt;s — открывающая?  ( [ {&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="520" y="280" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="stack.push(s)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="540" y="180" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="if&lt;div&gt;s — закрывающая?  ) ] }&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="520" y="410" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="if&lt;div&gt;stack пуст?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="520" y="540" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="10" value="Печать: &quot;Неверно расставлены скобки!!!&quot;&lt;div&gt;return&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6e6;" parent="1" vertex="1">
+          <mxGeometry x="250" y="560" width="230" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="11" value="if&lt;div&gt;Пара совпала? (stack.peek, s)&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="760" y="540" width="220" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="12" value="stack.pop()" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1010" y="555" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="Печать: &quot;Неверно расставлены скобки!!!&quot;&lt;div&gt;return&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6E6;" parent="1" vertex="1">
+          <mxGeometry x="740" y="680" width="260" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="14" value="После завершения цикла" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;" parent="1" vertex="1">
+          <mxGeometry x="45" y="380" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="15" value="if&lt;div&gt;stack пуст?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="55" y="460" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="16" value="Печать: &quot;Уравнение написано корректно!!!&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6ffe6;" parent="1" vertex="1">
+          <mxGeometry x="10" y="760" width="290" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="17" value="Печать: &quot;Неверно расставлены скобки!!!&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6e6;" parent="1" vertex="1">
+          <mxGeometry x="360" y="760" width="290" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="18" value="End" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="260" y="880" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" parent="1" source="2" target="3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" parent="1" source="3" target="4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" parent="1" source="4" target="5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" parent="1" source="5" target="6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="да" parent="1" source="6" target="7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" parent="1" source="7" target="5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="нет" parent="1" source="6" target="8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="нет" parent="1" source="8" target="5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="да" parent="1" source="8" target="9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" value="да" parent="1" source="9" target="10" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" parent="1" source="10" target="18" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" value="нет" parent="1" source="9" target="11" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" value="да" parent="1" source="11" target="12" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" parent="1" source="12" target="5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" value="нет" parent="1" source="11" target="13" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" style="entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="13" target="18" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e17" parent="1" source="5" target="14" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e18" parent="1" source="14" target="15" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e19" value="да" parent="1" source="15" target="16" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e20" parent="1" source="16" target="18" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e21" value="нет" parent="1" source="15" target="17" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e22" parent="1" source="17" target="18" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

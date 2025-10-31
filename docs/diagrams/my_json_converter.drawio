@@ -1,0 +1,130 @@
+<mxfile host="drawio-plugin" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" modified="2025-10-31T15:43:43.341Z" etag="IvfbbJUQ-3OHKJC2whl8" version="22.1.22" type="embed">
+  <diagram id="page-1" name="MyJsonConverter">
+    <mxGraphModel dx="508" dy="359" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="start" value="Start" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="165" y="30" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mainCreate" value="main(): создать User(name, age, Address)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="140" width="360" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mainCall" value="Вызов toJson(user)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f7ff;" parent="1" vertex="1">
+          <mxGeometry x="110" y="230" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="printRes" value="Печать результата в консоль" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6ffe6;" parent="1" vertex="1">
+          <mxGeometry x="430" y="230" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Основной метод: toJson(object)" style="text;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="60" y="320" width="320" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="isNull" value="if&lt;div&gt;object == null ?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="360" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="returnNull" value="return null" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6e6;" parent="1" vertex="1">
+          <mxGeometry x="300" y="385" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="init" value="clazz = object.getClass();&amp;nbsp;&lt;div&gt;json = &quot;{&quot;;&amp;nbsp;&lt;/div&gt;&lt;div&gt;fields = clazz.getDeclaredFields();&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;" parent="1" vertex="1">
+          <mxGeometry x="60" y="480" width="520" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="loopFields" value="for&lt;br&gt;Цикл по i=0..fields.length-1: field = fields[i]; &lt;br&gt;field.setAccessible(true);" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="560" width="520" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="readField" value="fieldName = field.getName(); &lt;br&gt;fieldValue = field.get(object); &lt;br&gt;json += &quot;\&quot;&quot;+fieldName+&quot;\&quot;:&quot;;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="640" width="520" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="valNull" value="if&lt;div&gt;fieldValue == null ?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="720" width="220" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="appendNull" value="json += null" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="320" y="735" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="isPrimOrString" value="&amp;nbsp;else if&lt;div&gt;isPrimitiveOrWrapper(field.getType()) || fieldValue instanceof String ?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="840" width="520" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="appendString" value="if&lt;div&gt;String → json += &quot;\&quot;&quot;+fieldValue+&quot;\&quot;&quot;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;" parent="1" vertex="1">
+          <mxGeometry x="60" y="970" width="520" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="appendPrimitive" value="else&lt;div&gt;&amp;nbsp;(примитив/обёртка) → json += fieldValue&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="600" y="970" width="520" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="appendNested" value="else&lt;div&gt;&amp;nbsp;(другой объект) → json += toJson(fieldValue) // рекурсия&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f7ff;" parent="1" vertex="1">
+          <mxGeometry x="60" y="1050" width="520" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="comma" value="if&lt;div&gt;&amp;nbsp;i &amp;lt; fields.length-1 → json += &quot;, &quot;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="140" y="1170" width="360" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="close" value="json += &quot;}&quot;;&amp;nbsp;&lt;div&gt;return json.toString();&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6ffe6;" parent="1" vertex="1">
+          <mxGeometry x="140" y="1260" width="360" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="exc" value="catch (IllegalAccessException) → e.fillInStackTrace(); // поведение не меняется" style="note;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="640" y="540" width="420" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="helperTitle" value="Вспомогательный метод: isPrimitiveOrWrapper(type)" style="text;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="640" y="630" width="360" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="helperBody" value="return true, if type — примитив или одна из обёрток: Integer, Long, Double, Float, Character, Boolean, Short, Byte" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="640" y="680" width="460" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" parent="1" source="start" target="mainCreate" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" parent="1" source="mainCreate" target="mainCall" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" parent="1" source="mainCall" target="printRes" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" parent="1" source="isNull" target="init" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="да" parent="1" source="isNull" target="returnNull" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" parent="1" source="init" target="loopFields" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" parent="1" source="loopFields" target="readField" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" parent="1" source="readField" target="valNull" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="да" parent="1" source="valNull" target="appendNull" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" value="нет" parent="1" source="valNull" target="isPrimOrString" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" value="да (строка)" parent="1" source="isPrimOrString" target="appendString" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" value="да (число/булево/символ)" parent="1" source="isPrimOrString" target="appendPrimitive" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" value="нет" style="exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" parent="1" source="isPrimOrString" target="appendNested" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="439.9999999999999" y="920" as="sourcePoint" />
+            <mxPoint x="489.4" y="1041.8" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e14" parent="1" source="appendNull" target="comma" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" style="exitX=0.25;exitY=1;exitDx=0;exitDy=0;" parent="1" source="appendString" target="comma" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" parent="1" source="appendPrimitive" target="comma" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e17" parent="1" source="appendNested" target="comma" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e18" parent="1" source="comma" target="close" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,160 @@
+<mxfile host="drawio-plugin" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" modified="2025-10-31T15:19:57.829Z" etag="WR7XKH9NtnGOIxolPRQe" version="22.1.22" type="embed">
+  <diagram id="binary-search-elementsearch" name="BinarySearch">
+    <mxGraphModel dx="508" dy="359" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="start" value="Start" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="120" y="40" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="input1" value="Ввод размера массива (capacity)&#xa;Заполнение случайными числами [0..100]&#xa;Сортировка массива&#xa;Вывод массива&#xa;Ввод искомого числа (element)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="80" y="130" width="220" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="init" value="Инициализация:&lt;br&gt;left = 0&lt;br&gt;right = array.length - 1&lt;br&gt;steps = 0&lt;br&gt;foundIndex&amp;nbsp;= 0" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="80" y="290" width="220" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="condWhile" value="while&lt;div&gt;left &amp;lt;= right ?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="90" y="440" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="computeMid" value="mid = (left + right) / 2" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="420" y="430" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="condEq" value="if&lt;div&gt;array[mid] == element ?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="430" y="520" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="foundProc" value="Выводим: «Число находится под индексом: mid»&lt;br&gt;foundIndex++&lt;br&gt;break (выход из цикла)" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="720" y="510" width="260" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="condLess" value="if&lt;div&gt;array[mid] &amp;lt; element ?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="430" y="660" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="moveLeft" value="left = mid + 1" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="720" y="640" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="moveRight" value="right = mid - 1" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="720" y="720" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="stepsInc" value="steps++" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="990" y="680" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="outSteps" value="Вывод: «Совершено шагов: » + steps" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="80" y="580" width="220" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="condNo" value="if&lt;div&gt;foundIndex &amp;lt; 1 ?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="90" y="680" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="printNo" value="Вывод: «Указанного числа нет в массиве!»" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="80" y="800" width="220" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="end" value="End" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="820" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" parent="1" source="start" target="input1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" parent="1" source="input1" target="init" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" parent="1" source="init" target="condWhile" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" parent="1" source="condWhile" target="computeMid" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4label" value="Да" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="e4" vertex="1" connectable="0">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-0.2" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" parent="1" source="condWhile" target="outSteps" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5label" value="Нет" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="e5" vertex="1" connectable="0">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0.2" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" parent="1" source="computeMid" target="condEq" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" parent="1" source="condEq" target="foundProc" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7label" value="Да" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="e7" vertex="1" connectable="0">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-0.2" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" parent="1" source="condEq" target="condLess" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8label" value="Нет" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="e8" vertex="1" connectable="0">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0.2" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" parent="1" source="condLess" target="moveLeft" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9label" value="Да" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="e9" vertex="1" connectable="0">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-0.2" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" parent="1" source="condLess" target="moveRight" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10label" value="Нет" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="e10" vertex="1" connectable="0">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0.2" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" parent="1" source="moveLeft" target="stepsInc" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" parent="1" source="moveRight" target="stepsInc" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" parent="1" source="stepsInc" target="condWhile" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="190" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e13label" value="назад к while" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="e13" vertex="1" connectable="0">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0.2" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e14" parent="1" source="foundProc" target="outSteps" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" parent="1" source="outSteps" target="condNo" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" parent="1" source="condNo" target="printNo" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e16label" value="Да" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="e16" vertex="1" connectable="0">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-0.2" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e17" parent="1" source="condNo" target="end" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e17label" value="Нет" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="e17" vertex="1" connectable="0">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0.2" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e18" parent="1" source="printNo" target="end" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

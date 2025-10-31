@@ -1,0 +1,168 @@
+<mxfile host="drawio-plugin" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" modified="2025-10-31T15:35:33.526Z" version="22.1.22" etag="OC5h2kceUjeet0SGIFo2" type="embed">
+  <diagram id="page-1" name="CaesarCipher Algorithm">
+    <mxGraphModel dx="2760" dy="359" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="start" value="Start" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="100" y="50" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="inText" value="Ввод текста: text" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="140" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="inMode" value="Ввод режима: 1 — шифрование, 2 — расшифровка" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-25" y="230" width="360" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="modeDec" value="switch&lt;div&gt;mode == 1 ?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="460" y="210" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="callProcEnc" value="result = process(text, +SHIFT)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f7ff;" parent="1" vertex="1">
+          <mxGeometry x="710" y="180" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mode2Dec" value="switch&lt;div&gt;mode == 2 ?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="460" y="330" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="callProcDec" value="result = process(text, -SHIFT)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f7ff;" parent="1" vertex="1">
+          <mxGeometry x="710" y="340" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="invalidMode" value="Печать: &quot;Неправильно выбран режим!!!&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6e6;" parent="1" vertex="1">
+          <mxGeometry x="710" y="460" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="printRes" value="Печать результата в консоль" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6ffe6;" parent="1" vertex="1">
+          <mxGeometry x="1080" y="260" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="end" value="End" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="1145" y="360" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Основной метод: process(text, shift)" style="text;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="60" y="420" width="380" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nullCheck" value="if&lt;div&gt;text == null или text пуст?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="75" y="470" width="230" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="returnText" value="return text" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="370" y="495" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="initRes" value="result = new StringBuilder" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;" parent="1" vertex="1">
+          <mxGeometry x="60" y="590" width="260" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="loopChars" value="for&lt;div&gt;Цикл: для каждого символа symbol из text&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="30" y="660" width="320" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="callShift" value="append( shiftSymbol(symbol, shift) )" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f7ff;" parent="1" vertex="1">
+          <mxGeometry x="420" y="660" width="320" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="returnRes" value="return result.toString()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6ffe6;" parent="1" vertex="1">
+          <mxGeometry x="60" y="740" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle2" value="Вспомогательный метод для определения индекса после сдвига символа: shiftSymbol(symbol, shift)" style="text;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="60" y="830" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="isUpperLat" value="if&lt;div&gt;symbol ∈ &#39;A&#39;..&#39;Z&#39; ?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="880" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="upperLatCalc" value="base=&#39;A&#39;, size=26, index=symbol-base, newIndex=normalizeIndex(index+shift,26), return base+newIndex" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="885" width="480" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="isLowerLat" value="else if&lt;div&gt;symbol ∈ &#39;a&#39;..&#39;z&#39; ?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="1000" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="lowerLatCalc" value="base=&#39;a&#39;, size=26, index=symbol-base, newIndex=normalizeIndex(index+shift,26), return base+newIndex" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="1005" width="480" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="isUpperCyr" value="else if&lt;div&gt;symbol ∈ &#39;А&#39;..&#39;Я&#39; ?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="820" y="880" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="upperCyrCalc" value="base=&#39;А&#39;, size=32, index=symbol-base, newIndex=normalizeIndex(index+shift,32), return base+newIndex" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1060" y="885" width="520" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="isLowerCyr" value="else if&lt;div&gt;symbol ∈ &#39;а&#39;..&#39;я&#39; ?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="820" y="1000" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="lowerCyrCalc" value="base=&#39;а&#39;, size=32, index=symbol-base, newIndex=normalizeIndex(index+shift,32), return base+newIndex" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1060" y="1005" width="520" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="elseReturn" value="else return symbol без изменений" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;" parent="1" vertex="1">
+          <mxGeometry x="770" y="1140" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle3" value="Вспомогательный метод для корректного подсчета остатка по модулю alphabetSize, чтобы всегда получить число в &lt;strong data-end=&quot;3872&quot; data-start=&quot;3859&quot;&gt;интервале&lt;/strong&gt; &lt;code data-end=&quot;3881&quot; data-start=&quot;3873&quot;&gt;[0,alphabetSize)&lt;/code&gt;&amp;nbsp;: normalizeIndex(shiftedIndex, alphabetSize)" style="text;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="920" y="580" width="420" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="normStep" value="remainder = shiftedIndex % alphabetSize; if remainder &lt; 0 → remainder += alphabetSize; return remainder;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;" parent="1" vertex="1">
+          <mxGeometry x="920" y="680" width="420" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" parent="1" source="start" target="inText" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" parent="1" source="inText" target="inMode" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" parent="1" source="inMode" target="modeDec" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="да" parent="1" source="modeDec" target="callProcEnc" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="нет" parent="1" source="modeDec" target="mode2Dec" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="да" parent="1" source="mode2Dec" target="callProcDec" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="нет" parent="1" source="mode2Dec" target="invalidMode" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" parent="1" source="callProcEnc" target="printRes" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" parent="1" source="callProcDec" target="printRes" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" parent="1" source="printRes" target="end" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" parent="1" source="nullCheck" target="initRes" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="190" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" value="да" parent="1" source="nullCheck" target="returnText" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" value="нет" parent="1" source="initRes" target="loopChars" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" parent="1" source="loopChars" target="callShift" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" parent="1" source="callShift" target="returnRes" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" value="да" parent="1" source="isUpperLat" target="upperLatCalc" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e17" value="нет" parent="1" source="isUpperLat" target="isLowerLat" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e18" value="да" parent="1" source="isLowerLat" target="lowerLatCalc" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e19" value="нет" parent="1" source="isLowerLat" target="isUpperCyr" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e20" value="да" parent="1" source="isUpperCyr" target="upperCyrCalc" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e21" value="нет" parent="1" source="isUpperCyr" target="isLowerCyr" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e22" value="да" parent="1" source="isLowerCyr" target="lowerCyrCalc" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e23" value="нет" parent="1" source="isLowerCyr" target="elseReturn" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
