@@ -1,6 +1,6 @@
-<mxfile host="drawio-plugin" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" modified="2025-10-31T15:18:51.858Z" etag="akxhbXxLSOzqmAoK8VZF" version="22.1.22" type="embed">
+<mxfile host="drawio-plugin" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" modified="2025-10-31T21:52:03.586Z" etag="_KpMVV26cylyyC1R4yLi" version="22.1.22" type="embed">
   <diagram id="page-1" name="BracketsCheck">
-    <mxGraphModel dx="2560" dy="359" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+    <mxGraphModel dx="2560" dy="213" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -16,13 +16,13 @@
         <mxCell id="5" value="for&lt;div&gt;Цикл: для каждого символа s из equation.split(&quot;&quot;)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-55" y="300" width="420" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="6" value="if&lt;div&gt;s — открывающая?  ( [ {&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="6" value="if&lt;div&gt;s — открывающая?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="520" y="280" width="200" height="100" as="geometry" />
         </mxCell>
         <mxCell id="7" value="stack.push(s)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="540" y="180" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="8" value="if&lt;div&gt;s — закрывающая?  ) ] }&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="8" value="if&lt;div&gt;s — закрывающая?&amp;nbsp;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="520" y="410" width="200" height="100" as="geometry" />
         </mxCell>
         <mxCell id="9" value="if&lt;div&gt;stack пуст?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">

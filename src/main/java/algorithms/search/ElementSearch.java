@@ -31,7 +31,7 @@ public class ElementSearch {
         int right = array.length - 1;
         while (left <= right) {
             steps++;
-            int mid = left + (right - left) / 2;
+            int mid = (left + right) / 2;
             if (array[mid] == element) {
                 System.out.println("Число находится под индексом: " + mid);
                 foundIndex++;
